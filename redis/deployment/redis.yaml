@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ashish-redis
+  labels:
+    environment: test
+    app.kubernetes.io/name: redis-0
+  annotations:
+    macOS: "true"
+spec:
+  containers:
+   - name: redis-0
+     image: redis:latest
+     imagePullPolicy: IfNotPresent
+     ports:
+      - containerPort: 8080
+        protocol: TCP
+     env:
+      - name: USERNAME
+        value: "ashishmahawal"

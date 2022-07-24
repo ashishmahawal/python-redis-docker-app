@@ -1,0 +1,18 @@
+build:
+    #!/usr/bin/env sh
+    set -ex
+    cd src
+    sh ./scripts/build.sh
+
+run:
+    #!/usr/bin/env sh
+    set -ex
+    cd src
+    sh ./scripts/deploy.sh
+
+stop:
+    #!/usr/bin/env sh
+    set -ex
+    cd src
+    sh ./scripts/undeploy.sh
+
